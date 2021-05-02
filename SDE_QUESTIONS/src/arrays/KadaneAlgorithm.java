@@ -27,8 +27,6 @@ class Main {
 	}
 }
 
-// } Driver Code Ends
-
 class Solution{
 
 	int maxSubarraySum(int arr[], int n){
@@ -38,7 +36,7 @@ class Solution{
 
 		for(int i=0 ; i<n ; i++){
 
-			localMax = Math.max(arr[i] , arr[i] + localMax);
+			localMax = Math.max(arr[i] , arr[i] + localMax);  // local max can be arr[i] or arr[i] + localmax of arr[i-1]
 			if(localMax > globalMax){
 				globalMax = localMax;
 			}
@@ -49,4 +47,7 @@ class Solution{
 	}
 
 }
+
+
+// https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
 
