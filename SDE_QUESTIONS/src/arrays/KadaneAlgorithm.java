@@ -3,7 +3,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class Main {
+//Given an array arr of N integers. Find the contiguous sub-array with maximum sum.
+// Expected Time Complexity: O(N)
+//Expected Auxiliary Space: O(1)
+
+public class KadaneAlgorithm  {
 
 	public static void main (String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,12 +18,12 @@ class Main {
 			int arr[] = new int[n];
 			String inputLine[] = br.readLine().trim().split(" ");
 
-			//adding elements
+
 			for(int i=0; i<n; i++){
 				arr[i] = Integer.parseInt(inputLine[i]);
 			}
 
-			Solution obj = new Solution();
+			MaxSumContigousArray obj = new MaxSumContigousArray();
 
 			//calling maxSubarraySum() function
 			System.out.println(obj.maxSubarraySum(arr, n));
@@ -27,7 +31,7 @@ class Main {
 	}
 }
 
-class Solution{
+class MaxSumContigousArray{
 
 	int maxSubarraySum(int arr[], int n){
 
