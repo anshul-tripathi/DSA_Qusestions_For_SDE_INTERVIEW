@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 class SolutionSortArray012
 {
+	// Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
 
 	private static void swap(int[] inputArray, int i, int j)
 	{
